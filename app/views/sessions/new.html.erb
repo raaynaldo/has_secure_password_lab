@@ -1,0 +1,12 @@
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= form_for @user, url: sessions_path do |f| %>
+    <%= f.text_field :name %>
+    <%= f.password_field :password %>
+    <%= f.submit %>
+<% end %>
+  
